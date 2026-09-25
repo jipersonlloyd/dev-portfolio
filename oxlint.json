@@ -1,0 +1,7 @@
+{
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "warn"
+  }
+}

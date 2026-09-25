@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Tell Tailwind v4 to use a `.dark` class on <html> instead of
+   the OS-level prefers-color-scheme media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Rest of your theme tokens ---------- */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+}
+
+/* ---------- Theme tokens (Tailwind v4 style) ---------- */
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+}
+
+/* ---------- Base reset & global styles ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f9fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- One custom utility for the section underline ---------- */
+@utility section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+/* ---------- Code card fade-in animation ---------- */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-fade-in {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f9fafc;      /* light default */
+  color: #1e293b;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #0a0f1a;      /* deep slate */
+  color: #e2e8f0;
+}
+
+section[id] {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
