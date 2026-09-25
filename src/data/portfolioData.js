@@ -29,16 +29,18 @@ export const skillGroups = [
     title: 'Databases',
     skills: [
       { icon: 'FaDatabase', label: 'MySQL' },
+      { icon: 'FaDatabase', label: 'MS-SQL' },
       { icon: 'FaDatabase', label: 'SQLite' },
-      { icon: 'FaFire', label: 'Firebase' },
     ],
   },
   {
     title: 'Tools',
     skills: [
+      { icon: 'FaFire', label: 'Firebase' },
       { icon: 'FaGitAlt', label: 'Git' },
       { icon: 'FaGithub', label: 'GitHub' },
       { icon: 'FaMicrosoft', label: 'Azure DevOps' }, 
+      { icon: 'FaBitbucket', label: 'Bitbucket' },
       { icon: 'FaTerminal', label: 'SSH / SFTP' },
       { icon: 'FaLinux', label: 'Linux' },
       { icon: 'FaServer',  label: 'REST APIs' },
